@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    
+
+    <div class="container">
+      <label class="signintxt" for="uname">Sign in</label> <br><br>
+      <input class="email" type="text" placeholder="Enter Username" name="uname" required>
+
+      <p class="logintxt">no account?<a href="" target="_blank" > Create one!</a></p>
+      <p><a class="logintxt" href="">Sign in with a security key</a></p>
+      <p><a class="logintxt" href="">Sign-in options</a></p>
+
+      
+        
+      <button type="submit">Next</button>
+      
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
