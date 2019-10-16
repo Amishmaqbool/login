@@ -37,6 +37,16 @@ button {
     border-bottom: 1px solid #666 !important;
 }
 
+
+.logintxt a:visited{
+    color: #0067b8;
+}
+.logintxt a:link{
+    color: #0067b8;
+}
+.logintxt a{
+    text-decoration: none;
+}
 button:hover {
   opacity: 0.8;
 }
